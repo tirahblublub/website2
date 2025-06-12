@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<head>
+	<title>My Personal Website</title>
+	<style>
+		body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      background-image: url("wb1.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+		header {
+			background-color: #a9bd95;
+			padding: 30px;
+			text-align: center;
+			width: 100%;
+		}
+
+		header h1 {
+			color: #fde4f2;
+			margin: 0;
+		}
+
+		nav {
+			text-align: center;
+			margin: 20px 0;
+			font-weight: bold;
+		}
+
+		.nav-button {
+			background-color: #EEA1CD;
+			border: none;
+			color: white;
+			padding: 10px 20px;
+			text-decoration: none;
+			font-size: 14px;
+			margin: 5px;
+			border-radius: 8px;
+			cursor: pointer;
+			display: inline-block;
+			transition: background-color 0.3s ease;
+		}
+
+		.nav-button:hover {
+			background-color: #d98ab1;
+		}
+
+		.text-container {
+			overflow: hidden;
+			width: 100%;
+			border: 1px solid #ddd;
+			padding: 10px;
+			white-space: nowrap;
+		}
+
+		.animated-text {
+			display: inline-block;
+			animation: slideRightToLeft 7s linear infinite;
+			font-size: 15px;
+			color: #EEA1CD;
+			padding-left: 35%;
+		}
+
+		@keyframes slideRightToLeft {
+			0% { transform: translateX(100%); }
+			100% { transform: translateX(-100%); }
+		}
+
+		.slideshow-container {
+			max-width: 800px;
+			position: relative;
+			margin: 20px auto;
+		}
+
+		.slides {
+			display: none;
+			width: 50%;
+			border-radius: 20px;
+		}
+
+		.fade {
+			animation: fadeEffect 2s;
+		}
+
+		@keyframes fadeEffect {
+			from { opacity: 0.4; }
+			to { opacity: 1; }
+		}
+
+		.clock-section {
+			text-align: center;
+			margin-top: 30px;
+		}
+
+		footer {
+			text-align: center;
+			padding: 10px 20px;
+			background-color: #a9bd95;
+			bottom: 0;
+			width: 100%;
+			box-sizing: border-box;
+			color: #fde4f2;
+		}
+
+		a {
+			color: lightpink;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<h1>⋆˚࿔ welcome to athirah's world 𝜗𝜚˚⋆</h1>
+	</header>
+
+	<nav>
+		<a href="home.html" class="nav-button">HOMEPAGE</a>
+		<a href="aboutme.html" class="nav-button">ABOUT ME</a>
+		<a href="education.html" class="nav-button">EDUCATION</a>
+		<a href="family.html" class="nav-button">FAMILY</a>
+		<a href="experience.html" class="nav-button">EXPERIENCE</a>
+		<a href="favouritemusic.html" class="nav-button">FAVOURITE MUSIC</a>
+		<a href="gallery.html" class="nav-button">MY GALLERY</a>		
+	</nav>
+
+	<div class="text-container">
+		<div class="animated-text">𝔀𝓮𝓁𝓬𝓸𝓶𝓮 𝓽𝓸 𝓽𝓱𝔂𝔀𝓸𝓻𝓵𝓭𝓼 𓆝 𓆟 𓆞 𓆝 𓆟</div>
+	</div>
+
+	<!-- Slideshow -->
+	<div class="slideshow-container">
+		<img class="slides fade" src="gb30.jpg" alt="Image 30">
+		<img class="slides fade" src="gb31.jpg" alt="Image 31">
+		<img class="slides fade" src="gb32.jpg" alt="Image 32">
+		<img class="slides fade" src="gb33.jpg" alt="Image 33">
+		<img class="slides fade" src="gb34.jpg" alt="Image 34">
+		<img class="slides fade" src="gb35.jpg" alt="Image 35">
+		<img class="slides fade" src="gb36.jpg" alt="Image 36">
+		<img class="slides fade" src="gb37.jpg" alt="Image 37">
+		<img class="slides fade" src="gb38.jpg" alt="Image 38">
+		<img class="slides fade" src="gb39.jpg" alt="Image 39">
+		<img class="slides fade" src="gb40.jpg" alt="Image 40">
+		<img class="slides fade" src="gb41.jpg" alt="Image 41">
+		<img class="slides fade" src="gb42.jpg" alt="Image 42">
+	</div>
+
+	<script>
+		let slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			let slides = document.getElementsByClassName("slides");
+			for (let i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1;}
+			slides[slideIndex - 1].style.display = "block";
+			setTimeout(showSlides, 3000); // Change image every 3 seconds
+		}
+	</script>
+
+	<!-- Clock Link -->
+	<div class="clock-section">
+		<h2>This is the analog clock</h2>
+		<p>
+			<b><a href="https://www.inchcalculator.com/time-calculators/" target="_blank">https://www.inchcalculator.com/time-calculators/</a></b>
+		</p>
+	</div>
+
+	<footer>
+		<p>&copy;2025 Thyrahhy, All rights reserved | Educational purposes only</p>
+	</footer>
+
+</body>
+</html>
